@@ -21,14 +21,14 @@
 }
 body {
   overflow: hidden;
+  overflow-y: auto;
   width: 100vw;
   height: 100vh;
 }
 .main-wrapper{
   overflow: hidden;
-  overflow-y: auto;
   width: calc(100vw + 17px);
-  height: 100vh;
+  // height: 100vh;
   @media (max-width: 991px) {
     width: 100vw;
   }
@@ -245,37 +245,52 @@ header.header{
   #headerVideo{
     position: relative;
     padding: 0 0 76px;
+    @media (max-width: 991px) {
+      padding: 0 0 95px;
+    }
+    @media (max-width: 600px) {
+      padding: 0 0 95px;
+    }
+    @media (max-width: 510px) {
+      height: 720px;
+    }
+    @media (max-width: 375px) {
+      height: 540px;
+    }
   }
   video.header-video{
     position: relative;
     width: 100%;
     top: 0;
     left: 0;
-  }
-  @media (max-width: 991px) {
-    #headerVideo {
-      padding: 0 0 114px;
+    @media (max-width: 768px) and (orientation:landscape){
+      // left: calc(50% - 368px);
+      // height: 357px;
+      left: 0;
+      height: auto;
     }
-  }
-  @media (max-width: 510px) {
-    #headerVideo {
-      height: 720px;
+    @media (max-width: 670px) and (orientation:landscape){
+      // left: calc(50% - 334px);
+      // height: 324px;
     }
-    video.header-video {
+    @media (max-width: 600px) and (orientation:landscape){
+      // left: calc(50% - 284px);
+      // height: 275px;
+    }
+    @media (max-width: 510px) {
       position: absolute;
       width: auto;
       top: 0;
-      left: calc(50% - 682px);
-      height: 480px;
+      left: calc(50% - 700px);
+      height: 500px;
     }
-  }
-  @media (max-width: 375px) {
-    #headerVideo {
-      height: 540px;
-    }
-    video.header-video {
+    @media (max-width: 375px) {
       left: calc(50% - 453px);
-      height: 320px;
+      height: 330px;
+    }
+    @media (max-width: 320px) {
+      left: calc(50% - 480px);
+      height: 340px;
     }
   }
 }
